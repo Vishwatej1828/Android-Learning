@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+<!-- Question 1 -->
+
+            <TextView
+                android:id="@+id/textViewQ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/q1"/>
+
+            <!--displaying a radio group on below line-->
+            <RadioGroup
+                android:id="@+id/radioGroupQ0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q1opt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:checked="false"
+                    android:text="@string/q1Opt1"
+                    android:textSize="12sp" />
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q1opt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:checked="false"
+                    android:text="@string/q1Opt2"
+                    android:textSize="12sp"/>
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q1Opt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:checked="false"
+                    android:text="@string/q1Opt3"
+                    android:textSize="12sp"/>
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q1Opt4"
+                    android:layout_width="match_parent"
+                    android:layout_height="27dp"
+                    android:checked="false"
+                    android:text="@string/q1Opt4"
+                    android:textSize="12sp"/>
+
+            </RadioGroup>
+
+<!-- Question 2 -->
+            <TextView
+                android:id="@+id/textViewQ2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/q2" />
+
+                <!--displaying a radio group on below line-->
+                <RadioGroup
+                    android:id="@+id/radioGroupQ1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp">
+
+                    <!--adding a radio button -->
+                    <RadioButton
+                        android:id="@+id/Q2opt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="27dp"
+                        android:checked="false"
+                        android:text="@string/q2Opt1"
+                        android:textSize="12sp" />
+
+                    <!--adding a radio button -->
+                    <RadioButton
+                        android:id="@+id/Q2opt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="27dp"
+                        android:checked="false"
+                        android:text="@string/q2Opt2"
+                        android:textSize="12sp" />
+
+                    <!--adding a radio button -->
+                    <RadioButton
+                        android:id="@+id/Q2Opt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="27dp"
+                        android:checked="false"
+                        android:text="@string/q2Opt3"
+                        android:textSize="12sp" />
+
+                    <!--adding a radio button -->
+                    <RadioButton
+                        android:id="@+id/Q2Opt4"
+                        android:layout_width="match_parent"
+                        android:layout_height="27dp"
+                        android:checked="false"
+                        android:text="@string/q2Opt4"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+<!-- Question 3 -->
+            <TextView
+                android:id="@+id/textViewQ3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/q3" />
+
+                <!--displaying a radio group on below line-->
+                <RadioGroup
+                    android:id="@+id/radioGroupQ2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp">
+
+                    <!--adding a radio button -->
+                    <RadioButton
+                        android:id="@+id/Q3opt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="27dp"
+                        android:checked="false"
+                        android:text="@string/q3Opt1"
+                        android:textSize="12sp"/>
+
+                    <!--adding a radio button -->
+                    <RadioButton
+                        android:id="@+id/Q3opt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="27dp"
+                        android:checked="false"
+                        android:text="@string/q3Opt2"
+                        android:textSize="12sp"/>
+
+                    <!--adding a radio button -->
+                    <RadioButton
+                        android:id="@+id/Q3Opt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="27dp"
+                        android:checked="false"
+                        android:text="@string/q3Opt3"
+                        android:textSize="12sp"/>
+
+                    <!--adding a radio button -->
+                    <RadioButton
+                        android:id="@+id/Q3Opt4"
+                        android:layout_width="match_parent"
+                        android:layout_height="27dp"
+                        android:checked="false"
+                        android:text="@string/q3Opt4"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+<!-- Question 4 -->
+            <TextView
+                android:id="@+id/textViewQ4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/q4" />
+
+                <!--displaying a radio group on below line-->
+                <RadioGroup
+                    android:id="@+id/radioGroupQ3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp">
+
+                    <!--adding a radio button -->
+                    <RadioButton
+                        android:id="@+id/Q4opt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="27dp"
+                        android:checked="false"
+                        android:text="@string/q4Opt1"
+                        android:textSize="12sp"/>
+
+                    <!--adding a radio button -->
+                    <RadioButton
+                        android:id="@+id/Q4opt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="27dp"
+                        android:checked="false"
+                        android:text="@string/q4Opt2"
+                        android:textSize="12sp"/>
+
+                    <!--adding a radio button -->
+                    <RadioButton
+                        android:id="@+id/Q4Opt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="27dp"
+                        android:checked="false"
+                        android:text="@string/q4Opt3"
+                        android:textSize="12sp"/>
+
+                    <!--adding a radio button -->
+                    <RadioButton
+                        android:id="@+id/Q4Opt4"
+                        android:layout_width="match_parent"
+                        android:layout_height="27dp"
+                        android:checked="false"
+                        android:text="@string/q4Opt4"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+<!-- Question 5 -->
+            <TextView
+                android:id="@+id/textViewQ5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/q5" />
+
+            <!--displaying a radio group on below line-->
+            <RadioGroup
+                android:id="@+id/radioGroupQ4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q5opt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:checked="false"
+                    android:text="@string/q5Opt1"
+                    android:textSize="12sp"/>
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q5opt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:checked="false"
+                    android:text="@string/q5Opt2"
+                    android:textSize="12sp"/>
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q5Opt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:checked="false"
+                    android:text="@string/q5Opt3"
+                    android:textSize="12sp"/>
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q5Opt4"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:checked="false"
+                    android:text="@string/q5Opt4"
+                    android:textSize="12sp"/>
+
+            </RadioGroup>
+
+<!-- Question 6 -->
+            <TextView
+                android:id="@+id/textViewQ6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/q6" />
+
+            <!--displaying a radio group on below line-->
+            <RadioGroup
+                android:id="@+id/radioGroupQ5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q6opt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:checked="false"
+                    android:text="@string/q6Opt1"
+                    android:textSize="12sp"/>
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q6opt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:checked="false"
+                    android:text="@string/q6Opt2"
+                    android:textSize="12sp"/>
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q6Opt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:checked="false"
+                    android:text="@string/q6Opt3"
+                    android:textSize="12sp"/>
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q6Opt4"
+                    android:layout_width="match_parent"
+                    android:layout_height="27dp"
+                    android:checked="false"
+                    android:text="@string/q6Opt4"
+                    android:textSize="12sp"/>
+
+            </RadioGroup>
+
+<!-- Question 7 -->
+            <TextView
+                android:id="@+id/textViewQ7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/q7" />
+
+            <!--displaying a radio group on below line-->
+            <RadioGroup
+                android:id="@+id/radioGroupQ6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q7opt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:checked="false"
+                    android:text="@string/q7Opt1"
+                    android:textSize="12sp"/>
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q7opt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:checked="false"
+                    android:text="@string/q7Opt2"
+                    android:textSize="12sp"/>
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q7Opt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:checked="false"
+                    android:text="@string/q7Opt3"
+                    android:textSize="12sp"/>
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q7Opt4"
+                    android:layout_width="match_parent"
+                    android:layout_height="27dp"
+                    android:checked="false"
+                    android:text="@string/q7Opt4"
+                    android:textSize="12sp"/>
+
+            </RadioGroup>
+
+<!-- Question 8 -->
+            <TextView
+                android:id="@+id/textViewQ8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/q8" />
+
+            <!--displaying a radio group on below line-->
+            <RadioGroup
+                android:id="@+id/radioGroupQ7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q8opt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:checked="false"
+                    android:text="@string/q8Opt1"
+                    android:textSize="12sp"/>
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q8opt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:checked="false"
+                    android:text="@string/q8Opt2"
+                    android:textSize="12sp"/>
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q8Opt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:checked="false"
+                    android:text="@string/q8Opt3"
+                    android:textSize="12sp"/>
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q8Opt4"
+                    android:layout_width="match_parent"
+                    android:layout_height="27dp"
+                    android:checked="false"
+                    android:text="@string/q8Opt4"
+                    android:textSize="12sp"/>
+
+            </RadioGroup>
+
+<!-- Question 9 -->
+            <TextView
+                android:id="@+id/textViewQ9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/q9" />
+
+            <!--displaying a radio group on below line-->
+            <RadioGroup
+                android:id="@+id/radioGroupQ8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q9opt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:checked="false"
+                    android:text="@string/q9Opt1"
+                    android:textSize="12sp"/>
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q9opt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:checked="false"
+                    android:text="@string/q9Opt2"
+                    android:textSize="12sp"/>
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q9Opt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:checked="false"
+                    android:text="@string/q9Opt3"
+                    android:textSize="12sp"/>
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q9Opt4"
+                    android:layout_width="match_parent"
+                    android:layout_height="27dp"
+                    android:checked="false"
+                    android:text="@string/q9Opt4"
+                    android:textSize="12sp"/>
+
+            </RadioGroup>
+
+<!-- Question 10 -->
+            <TextView
+                android:id="@+id/textViewQ10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/q10" />
+
+            <!--displaying a radio group on below line-->
+            <RadioGroup
+                android:id="@+id/radioGroupQ9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q10opt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:checked="false"
+                    android:text="@string/q10Opt1"
+                    android:textSize="12sp"/>
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q10opt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:checked="false"
+                    android:text="@string/q10Opt2"
+                    android:textSize="12sp"/>
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q10Opt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:checked="false"
+                    android:text="@string/q10Opt3"
+                    android:textSize="12sp"/>
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/Q10Opt4"
+                    android:layout_width="match_parent"
+                    android:layout_height="27dp"
+                    android:checked="false"
+                    android:text="@string/q10Opt4"
+                    android:textSize="12sp"/>
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#000000"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Q10Opt4"
+                tools:layout_editor_absoluteX="20dp"
+                tools:layout_editor_absoluteY="818dp" />
+
+                <Button
+                    android:id="@+id/submitTestBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/submit_test"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/closeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:onClick="closeApp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+        tools:layout_editor_absoluteY="44dp" />
+
+    <ImageView
+        android:id="@+id/moveBackBtn"
+        android:layout_width="45dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="15dp"
+        android:onClick="moveBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat ="@drawable/back"
+        tools:layout_editor_absoluteY="54dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">cppTestApp</string>
+
+    <string name="q1">1. Which of the following correctly declares an array in C++?</string>
+    <string name="q1Opt1"> array{10} </string>
+    <string name="q1Opt2"> array array[10]</string>
+    <string name="q1Opt3"> int array</string>
+    <string name="q1Opt4"> int array[10]</string>
+
+    <string name="q2">2. Which keyword is used to define the macros in c++?</string>
+    <string name="q2Opt1"> #macro </string>
+    <string name="q2Opt2"> #define</string>
+    <string name="q2Opt3"> macro</string>
+    <string name="q2Opt4"> define</string>
+
+    <string name="q3">3. What is Inheritance in C++?</string>
+    <string name="q3Opt1"> Deriving new classes from existing classes </string>
+    <string name="q3Opt2"> Overloading of classes </string>
+    <string name="q3Opt3"> Classes with same names </string>
+    <string name="q3Opt4"> Wrapping of data into a single class </string>
+
+
+    <string name="q4"> 4.  What does polymorphism in OOPs mean?</string>
+    <string name="q4Opt1"> Concept of allowing overiding of functions </string>
+    <string name="q4Opt2"> Concept of hiding data </string>
+    <string name="q4Opt3"> Concept of keeping things in differnt modules/files </string>
+    <string name="q4Opt4"> Concept of wrapping things into a single unit </string>
+
+
+    <string name="q5"> 5. How structures and classes in C++ differ?</string>
+    <string name="q5Opt1"> Structures by default hide every member whereas classes do not </string>
+    <string name="q5Opt2"> In Structures, members are public by default whereas, in Classes, they are private by default </string>
+    <string name="q5Opt3"> Structures cannot have private members whereas classes can have </string>
+    <string name="q5Opt4"> In Structures, members are private by default whereas, in Classes, they are public by default </string>
+
+
+    <string name="q6"> 6. Which operator is used in pointer to member function?</string>
+    <string name="q6Opt1"> .* </string>
+    <string name="q6Opt2"> ->* </string>
+    <string name="q6Opt3"> Both .* and ->* </string>
+    <string name="q6Opt4"> $* </string>
+
+
+    <string name="q7"> 7.. What will happen in the following C++ code snippet?\n
+               \t int a = 100, b = 200;\n
+               \t int *p = &amp;a, *q = &amp;b;\n
+               \t p = q;\n
+        </string>
+
+    <string name="q7Opt1"> b is assigned to a </string>
+    <string name="q7Opt2"> p now points to b </string>
+    <string name="q7Opt3"> a is assigned to b </string>
+    <string name="q7Opt4"> q now points to a </string>
+
+
+    <string name="q8"> 8.  Which of the following is correct about templates?</string>
+    <string name="q8Opt1"> It is a type of compile time polymorphism </string>
+    <string name="q8Opt2"> It allows the programmer to write one code for all data types </string>
+    <string name="q8Opt3"> Helps in generic programming </string>
+    <string name="q8Opt4"> All of the mentioned </string>
+
+
+    <string name="q9"> 9. Where does the object is created?</string>
+    <string name="q9Opt1"> class </string>
+    <string name="q9Opt2"> constructor </string>
+    <string name="q9Opt3"> destructor </string>
+    <string name="q9Opt4"> attributes </string>
+
+
+    <string name="q10"> 10. Which special character is used to mark the end of class?</string>
+    <string name="q10Opt1"> ;</string>
+    <string name="q10Opt2"> : </string>
+    <string name="q10Opt3"> $ </string>
+    <string name="q10Opt4"> # </string>
+    <string name="submit_test">Submit Test</string>
+
+</resources>
