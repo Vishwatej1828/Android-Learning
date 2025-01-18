@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">
+        recycleViewWorkout
+    </string>
+
+
+    <string name="abridge_short_desc">
+        Generative AI for clinical documentation, giving agency back to clinicians, creating clarity for patients, and establishing radical efficiencies to transform healthcare from the conversation up.
+    </string>
+
+    <string name="abridge_long_desc">
+        Generative AI for clinical documentation, giving agency back to clinicians, creating clarity for patients, and establishing radical efficiencies to transform healthcare from the conversation up.\n\n
+        <b>What does it do:</b> Medical conversation documentation\n
+        <b>Funding:</b> $213 M\n
+        <b>Year Founded:</b> 2018\n
+        <b>Headquarters:</b> Pittsburgh, Pennsylvania\n
+        <b>From Editor:</b> Dr. Shiv Rao, a practicing cardiologist, founded Abridge in 2018 to free clinicians from the time-sucking paperwork that comes after they see patients: jotting down detailed notes for their medical records.\n
+                                \t Abridge records their conversations with patients and uses AI to summarize them. Ten thousand clinicians are already using it, and the startup is worth $850 million after raising more than $200 million in venture funding.
+    </string>
+
+
+    <string name="adept_short_desc">
+        A digital assistant that can perform tasks like clicking, searching, typing, and scrolling for users.
+    </string>
+
+    <string name="adept_long_desc">
+        A digital assistant that can perform tasks like clicking, searching, typing, and scrolling for users.\n\n
+
+        <b>What does it do:</b> AI Model Developer\n
+        <b>Funding:</b> $415 M\n
+        <b>Year Founded:</b> 2022\n
+        <b>Headquarters:</b> San Francisco, California\n
+        <b>From Editor:</b> Unicorn startup Adept is working on a digital assistant that can do all your clicking, searching, typing, and scrolling for you.\n
+                                \t Its AI model aims to convert a simple text command (like \"find a home in my budget\" or \"create a profit and loss statement\") into actual actions carried out by your computer without you having to lift a finger.\n
+                                \t Adept has announced $415 million in total funding and is backed by strategic investors like Microsoft and Nvidia. CEO David Luan, a former OpenAI vice president, co-founded the startup\n
+                                \t with Ashish Vaswani and Niki Parmar former Google Brain scientists who invented a major AI breakthrough called the transformer (that\'s the T in ChatGPT).\n
+                                \t Of the startup\'s nine co-founders, only five remain Luan, Erich Elsen, Maxwell Nye, Augustus Odena and Kelsey Szot.
+    </string>
+
+
+    <string name="andruil_industries_short_desc">
+        AI-driven defense software and hardware for autonomous operations.
+    </string>
+
+    <string name="andruil_industries_long_desc">
+        AI-driven defense software and hardware for autonomous operations.\n\n
+
+        <b>What does it do:</b> Defense software and hardware\n
+        <b>Funding:</b> $2.8 B\n
+        <b>Year Founded:</b> 2017\n
+        <b>Headquarters:</b> Costa Mesa, California\n
+        <b>From Editor:</b> Unlike traditional defense contractors that focus on hardware, Anduril\'s core product is its \"Lattice\" software, which uses AI to run drones, surveillance cameras, and underwater vessels nearly autonomously.\n
+                                \t These vehicles can work in sync to create a single 3D rendering of an entire area, enabling the protection of land borders and military bases.
+                                \t Founded by Palmer Luckey, Brian Schimpf, Trae Stephens, Matt Grimm, and Joe Chen, Anduril has found success as a rare tech company to penetrate the defense sector and has raised $2.8 billion with a valuation of $10 billion.
+    </string>
+
+    <string name="anthropic_short_desc">
+        Developing advanced AI models to transform industries like healthcare and legal documentation.
+    </string>
+
+    <string name="anthropic_long_desc">
+        Developing advanced AI models to transform industries like healthcare and legal documentation.\n\n
+
+        <b>What does it do:</b> AI model developer\n
+        <b>Funding:</b> $7.7 B\n
+        <b>Year Founded:</b> 2020\n
+        <b>Headquarters:</b> San Francisco, California\n
+        <b>From Editor:</b> Anthropic has emerged as the OpenAI challenger with the most staying power. In June, the $18 billion (valuation) AI company released a large language model that cofounder and CEO Dario Amodei boasts \"outperforms every competitor\" regardless of price.\n
+                            \t The model, called Claude 3.5 Sonnet, is already hard at work coding apps and digesting legal documents. But Amodei is most excited about health care. Pfizer and the Dana-Farber Cancer Institute are early customers, as is DeepScribe, which uses the tool to help doctors organize conversations with patients.\n
+                            \t \"As the models get smarter, they\'re going to be increasingly used for the core of the field,\" Amodei says.
+    </string>
+
+    <string name="anyscale_short_desc">
+        Developing advanced AI models to transform industries like healthcare and legal documentation.
+    </string>
+
+    <string name="anyscale_long_desc">
+        Developing advanced AI models to transform industries like healthcare and legal documentation.\n\n
+
+        <b>What does it do:</b> AI app deployment software\n
+        <b>Funding:</b> $259 M\n
+        <b>Year Founded:</b> 2019\n
+        <b>Headquarters:</b> San Francisco, California\n
+        <b>From Editor:</b> What do OpenAI, Uber, and Instacart have in common? They all use Ray, open-source software built by Anyscale that\'s used to scale up AI models.\n
+                                \t The company, which emerged from a research lab at UC Berkeley, enables users to easily scale Python code and create custom apps without becoming experts in distributed computing.\n
+                                \t It was founded by CEO Robert Nishihara, CTO Philipp Moritz, and executive chairman and Databricks cofounder Ion Stoica. The company has raised $259 million and has a valuation of $1.1 billion.\n
+                                \t Recently, the company announced an update to warn users if Ray was configured to be accessible on the open internet after security researchers found that hackers had installed crypto-miners on some user\'s AI servers, as Forbes reported.
+    </string>
+
+
+</resources>
