@@ -121,9 +121,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="15dp"
+        android:layout_marginTop="35dp"
+        android:contentDescription="Closes the app"
         android:onClick="closeApp"
         android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
         tools:layout_editor_absoluteY="44dp" />
 
@@ -132,8 +135,11 @@
         android:layout_width="45dp"
         android:layout_height="34dp"
         android:layout_marginStart="15dp"
+        android:layout_marginTop="35dp"
+        android:contentDescription="Move back to last activity"
         android:onClick="moveBack"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat ="@drawable/back"
         tools:layout_editor_absoluteY="54dp" />
 

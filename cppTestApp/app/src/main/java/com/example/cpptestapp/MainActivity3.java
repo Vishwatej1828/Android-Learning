@@ -1,18 +1,15 @@
 package com.example.cpptestapp;
 
-import android.app.Notification;
-import android.graphics.Color;
-import android.os.Bundle;
-
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import org.eazegraph.lib.charts.PieChart;
 import org.eazegraph.lib.models.PieModel;
-import androidx.core.content.ContextCompat;
 
 public class MainActivity3 extends AppCompatActivity {
 

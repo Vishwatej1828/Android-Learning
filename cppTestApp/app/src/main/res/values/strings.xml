@@ -72,6 +72,13 @@
     <string name="q10Opt2"> : </string>
     <string name="q10Opt3"> $ </string>
     <string name="q10Opt4"> # </string>
+
     <string name="submit_test">Submit Test</string>
+
+    <string name="welcome_to_cpp_test">Welcome to CPP Test</string>
+    <string name="start_test">Start Test</string>
+    <string name="app_welcome_logo">App Welcome logo</string>
+    <string name="move_back_button">Move Back button</string>
+    <string name="close_the_app_button">close the app button</string>
 
 </resources>
