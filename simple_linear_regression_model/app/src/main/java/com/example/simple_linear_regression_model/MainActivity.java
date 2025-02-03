@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
                 Log.e(TAG, "Failed to load model.");
             }
         } catch (IOException e) {
-            e.printStackTrace();
             interpreter = null;
             Log.e(TAG, "onCreate: Exception occurred while loading the model" + e);
         }
@@ -79,14 +78,17 @@ public class MainActivity extends AppCompatActivity {
 
     // Load the TFLite model file from assets
     private MappedByteBuffer loadModelFile() throws IOException {
-        AssetFileDescriptor fileDescriptor = getAssets().openFd("simple_linear_regression_model.tflite");
-        FileInputStream inputStream = new FileInputStream(fileDescriptor.getFileDescriptor());
-        FileChannel fileChannel = inputStream.getChannel();
-        long startOffset = fileDescriptor.getStartOffset();
-        long declaredLength = fileDescriptor.getDeclaredLength();
+        try (AssetFileDescriptor fileDescriptor = getAssets().openFd("simple_linear_regression_model.tflite");
+             FileInputStream inputStream = new FileInputStream(fileDescriptor.getFileDescriptor());
+             FileChannel fileChannel = inputStream.getChannel()) {
 
-        return fileChannel.map(FileChannel.MapMode.READ_ONLY, startOffset, declaredLength);
+            long startOffset = fileDescriptor.getStartOffset();
+            long declaredLength = fileDescriptor.getDeclaredLength();
+
+            return fileChannel.map(FileChannel.MapMode.READ_ONLY, startOffset, declaredLength);
+        }
     }
+
 
     @Override
     protected void onDestroy() {
