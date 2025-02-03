@@ -1,9 +1,6 @@
 package com.example.recorder;
 
-import static android.content.ContentValues.TAG;
-
 import android.Manifest;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.SurfaceTexture;
 import android.hardware.camera2.CameraAccessException;
@@ -14,14 +11,11 @@ import android.hardware.camera2.CameraManager;
 import android.hardware.camera2.CaptureRequest;
 import android.hardware.camera2.params.StreamConfigurationMap;
 import android.media.MediaRecorder;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.util.Log;
 import android.util.Size;
 import android.view.Surface;
 import android.view.TextureView;
-import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -29,14 +23,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.core.content.FileProvider;
 
-import com.google.android.material.snackbar.Snackbar;
-
-import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 // Working Correctly
 public class MainActivity extends AppCompatActivity {
@@ -65,27 +55,21 @@ public class MainActivity extends AppCompatActivity {
 
         mediaRecorder = new MediaRecorder();
 
-        startButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (isRecording) {
-                    Toast.makeText(MainActivity.this, "Already recording", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                startRecording();
+        startButton.setOnClickListener(v -> {
+            if (isRecording) {
+                Toast.makeText(MainActivity.this, "Already recording", Toast.LENGTH_SHORT).show();
+                return;
             }
+            startRecording();
         });
 
-        stopButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!isRecording) {
-                    Toast.makeText(MainActivity.this, "Not recording", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                stopRecording();
-                openCamera();
+        stopButton.setOnClickListener(v -> {
+            if (!isRecording) {
+                Toast.makeText(MainActivity.this, "Not recording", Toast.LENGTH_SHORT).show();
+                return;
             }
+            stopRecording();
+            openCamera();
         });
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED ||
@@ -116,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         } catch (CameraAccessException e) {
-            e.printStackTrace();
+            Log.e("CameraAccess", "Error accessing camera", e);
         }
     }
 
@@ -136,18 +120,18 @@ public class MainActivity extends AppCompatActivity {
     private void configureTextureView() {
         textureView.setSurfaceTextureListener(new TextureView.SurfaceTextureListener() {
             @Override
-            public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
+            public void onSurfaceTextureAvailable(@NonNull SurfaceTexture surface, int width, int height) {
                 openCamera();
             }
 
             @Override
-            public void onSurfaceTextureSizeChanged(SurfaceTexture surface, int width, int height) {}
+            public void onSurfaceTextureSizeChanged(@NonNull SurfaceTexture surface, int width, int height) {}
 
             @Override
-            public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) { return false; }
+            public boolean onSurfaceTextureDestroyed(@NonNull SurfaceTexture surface) { return false; }
 
             @Override
-            public void onSurfaceTextureUpdated(SurfaceTexture surface) {}
+            public void onSurfaceTextureUpdated(@NonNull SurfaceTexture surface) {}
         });
     }
 
@@ -178,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }, null);
         } catch (CameraAccessException e) {
-            e.printStackTrace();
+            Log.e("CameraAccess", "Error accessing camera", e);
         }
     }
 
@@ -194,9 +178,8 @@ public class MainActivity extends AppCompatActivity {
             final CaptureRequest.Builder builder = cameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_PREVIEW);
             builder.addTarget(surface);
 
-            Arrays Arrays = null;
             cameraDevice.createCaptureSession(
-                    Arrays.asList(surface),
+                    List.of(surface),
                     new CameraCaptureSession.StateCallback() {
                         @Override
                         public void onConfigured(@NonNull CameraCaptureSession session) {
@@ -205,7 +188,7 @@ public class MainActivity extends AppCompatActivity {
                             try {
                                 cameraCaptureSession.setRepeatingRequest(builder.build(), null, null);
                             } catch (CameraAccessException e) {
-                                e.printStackTrace();
+                                Log.e("CameraPreview", "Unable to apply repeating request for camera preview", e);
                             }
                         }
 
@@ -216,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
                     }, null
             );
         } catch (CameraAccessException e) {
-            e.printStackTrace();
+            Log.e("CameraPreview", "Error camera preview", e);
         }
     }
 
@@ -247,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
                                 isRecording = true;
                                 Toast.makeText(MainActivity.this, "Recording started", Toast.LENGTH_SHORT).show();
                             } catch (CameraAccessException e) {
-                                e.printStackTrace();
+                                Log.e("StartRecording", "Error in capturing the camera session", e);
                             }
                         }
 
@@ -258,13 +241,13 @@ public class MainActivity extends AppCompatActivity {
                     }, null
             );
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e("StartRecorder", "Error in starting the recording", e);
         }
     }
 
     private void setupMediaRecorder() throws IOException {
 
-        videoPath = getExternalFilesDir(null).getAbsolutePath() + "/video.mp4";
+        videoPath = Objects.requireNonNull(getExternalFilesDir(null)).getAbsolutePath() + "/video.mp4";
 
         mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
         mediaRecorder.setVideoSource(MediaRecorder.VideoSource.SURFACE);
@@ -287,13 +270,9 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "saved path: " + videoPath, Toast.LENGTH_SHORT).show();
 
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e("StopRecording", "Error stopping the recording", e);
+
         }
-    }
-
-    private void openFilePath(String videoPath) {
-
-        Log.d(TAG, "openFilePath: " + videoPath);
     }
 
     @Override
@@ -307,6 +286,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == REQUEST_CAMERA_PERMISSION) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 setupCamera();
