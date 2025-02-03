@@ -1,9 +1,6 @@
 package com.example.implicitintent;
 
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,14 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
-import java.net.URI;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -93,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         openEmailBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Implicit Intet to send mail
+                // Implicit Intent to send mail
                 String mailText = emailAdd.getText().toString();
                 String subject = "Empty Subject";
                 Uri attachment = null;
