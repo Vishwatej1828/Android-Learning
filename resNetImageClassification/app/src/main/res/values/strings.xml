@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ResNet Image Classification</string>
+    <string name="pick_image">Pick Image</string>
+    <string name="open_camera">Open Camera</string>
+    <string name="result">Result will be shown here</string>
+    <string name="image_preview">Image Preview</string>
+
+</resources>
