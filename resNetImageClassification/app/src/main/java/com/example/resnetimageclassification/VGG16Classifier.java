@@ -11,17 +11,17 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.MappedByteBuffer;
 
-public class ResNet50Classifier {
+public class VGG16Classifier {
 
-    private static final String TAG = "ResNet50Classifier";
-    private static final int IMAGE_SIZE = 224; // ResNet50 input size
-    private static final int NUM_CLASSES = 1000; // ResNet50 output classes
+    private static final String TAG = "VGG16Classifier";
+    private static final int IMAGE_SIZE = 224; // VGG16 input size
+    private static final int NUM_CLASSES = 1000; // VGG16 output classes
 
     private final Interpreter tflite;
     private Context context;
     private ImageNetLabels imageNetLabels;
 
-    public ResNet50Classifier(Context context, String modelName) {
+    public VGG16Classifier(Context context, String modelName) {
         this.context = context;
         try {
             MappedByteBuffer modelFile = loadModelFile(context, modelName);

@@ -42,4 +42,5 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation(libs.tf.lite)
     implementation(libs.tf.lite.support)
+    implementation(libs.card.view)
 }
