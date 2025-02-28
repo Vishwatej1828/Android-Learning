@@ -1,4 +1,3 @@
-#app specific gitignore(for double check)
 *.iml
 .gradle
 /local.properties

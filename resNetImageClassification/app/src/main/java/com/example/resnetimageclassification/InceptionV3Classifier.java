@@ -11,17 +11,17 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.MappedByteBuffer;
 
-public class ResNet50Classifier {
+public class InceptionV3Classifier {
 
-    private static final String TAG = "ResNet50Classifier";
-    private static final int IMAGE_SIZE = 224; // ResNet50 input size
-    private static final int NUM_CLASSES = 1000; // ResNet50 output classes
+    private static final String TAG = "InceptionV3Classifier";
+    private static final int IMAGE_SIZE = 299; // InceptionV3 input size
+    private static final int NUM_CLASSES = 1000; // InceptionV3 output classes
 
     private final Interpreter tflite;
     private Context context;
     private ImageNetLabels imageNetLabels;
 
-    public ResNet50Classifier(Context context, String modelName) {
+    public InceptionV3Classifier(Context context, String modelName) {
         this.context = context;
         try {
             MappedByteBuffer modelFile = loadModelFile(context, modelName);
@@ -58,29 +58,22 @@ public class ResNet50Classifier {
     }
 
     public float[][][][] preprocessImage(Bitmap bitmap) {
-        Bitmap resizedBitmap = Bitmap.createScaledBitmap(bitmap, IMAGE_SIZE, IMAGE_SIZE, true);
-        float[][][][] input = new float[1][IMAGE_SIZE][IMAGE_SIZE][3];
-
-        // Mean values for ResNet50
-        float meanR = 103.94f;
-        float meanG = 116.78f;
-        float meanB = 123.68f;
+        Bitmap resizedBitmap = Bitmap.createScaledBitmap(bitmap, 299, 299, true);
+        float[][][][] input = new float[1][299][299][3];
 
         for (int y = 0; y < IMAGE_SIZE; y++) {
             for (int x = 0; x < IMAGE_SIZE; x++) {
                 int pixel = resizedBitmap.getPixel(x, y);
 
-                float r = ((pixel >> 16) & 0xFF);
-                float g = ((pixel >> 8) & 0xFF);
-                float b = (pixel & 0xFF);
+                float r = ((pixel >> 16) & 0xFF) / 127.5f - 1.0f;
+                float g = ((pixel >> 8) & 0xFF) / 127.5f - 1.0f;
+                float b = (pixel & 0xFF) / 127.5f - 1.0f;
 
-                // Normalize by subtracting the mean values for each channel
-                input[0][y][x][0] = r - meanR; // Red channel
-                input[0][y][x][1] = g - meanG; // Green channel
-                input[0][y][x][2] = b - meanB; // Blue channel
+                input[0][y][x][0] = r;
+                input[0][y][x][1] = g;
+                input[0][y][x][2] = b;
             }
         }
-
         return input;
     }
 
