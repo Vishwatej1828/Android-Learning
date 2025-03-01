@@ -10,10 +10,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        app: [ "cppTestApp", "implicitIntent", "Learning", "listViewApp", "recorder", "recycleView", "resNetImageClassification", "simple_linear_regression_model" ]
-
     steps:
       - uses: actions/checkout@v4
 
@@ -24,10 +20,15 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x ${{ matrix.app }}/gradlew
+      - name: Find Android apps
+        id: find_apps
+        run: |
+          echo "APPS=$(find . -mindepth 1 -maxdepth 1 -type d -exec test -f {}/gradlew -a -f {}/app/build.gradle \; -print | jq -R -s -c 'split("\n")[:-1]')" >> $GITHUB_ENV
 
-      - name: Build with Gradle
-        working-directory: ${{ matrix.app }}
-        run: ./gradlew build
-
+      - name: Build each app
+        run: |
+          for app in $(echo $APPS | jq -r '.[]'); do
+            echo "Building $app..."
+            chmod +x $app/gradlew
+            (cd $app && ./gradlew build)
+          done
