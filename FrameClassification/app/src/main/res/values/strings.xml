@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Frame Classification</string>
+    <string name="pick_image">Pick Image</string>
+    <string name="open_camera">Open Camera</string>
+    <string name="result">Result will be shown here</string>
+    <string name="image_preview">Image Preview</string>
+    <string name="pick_image_from_gallery">Pick Image from Gallery</string>
+    <string name="capture_image_with_camera">Capture Image with Camera</string>
+    <string name="selected_image">Selected Image</string>
+    <string name="resnet50">ResNet50:</string>
+    <string name="class_text">🔹Class:</string>
+    <string name="confidence">🔹Confidence:</string>
+    <string name="vgg16">VGG16:</string>
+    <string name="inceptionv3">InceptionV3:</string>
+    <string name="mobilenetv2">MobileNetV2:</string>
+
+</resources>
